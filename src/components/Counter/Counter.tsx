@@ -55,11 +55,11 @@ const Counter = () => {
     if (!count && !minLimit && !maxLimit) {
       alert('Counter is already reset')
       return
+    } else if (window.confirm('Are you sure you want to reset the counter?')) {
+      setCount(0)
+      setMinLimit('')
+      setMaxLimit('')
     }
-    window.confirm('Are you sure you want to reset the counter?') &&
-    setCount(0)
-    setMinLimit('')
-    setMaxLimit('')
   }
 
   return (
